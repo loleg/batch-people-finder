@@ -2,7 +2,7 @@ var	sys = require('sys')
 	parser = require('../lib/parser');
 
 var sample_person_xml = 'http://zesty.ca/pfif/1.2/pfif-1.2-example.xml';
-var sample_person_cvs = 'some url'; // << fill in!
+var sample_person_cvs = 'example-data/pfif-1.2-example-simple.csv';
 
 var person = {
 	author_name: 'Bill Mandil',
@@ -27,7 +27,7 @@ exports.ParseXMLFile = function(test){
 // Loads an CVS file by uri, parses it and then checks if it's converted correctly 
 exports.ParseCSVFile = function(test){
 	test.expect(4);
-	parser.ParseFile({uri: sample_person_cvs, format: 'csv'}, function(err, result){
+	parser.ParseFile({uri: sample_person_cvs, format:'csv', delimiter:';'}, function(result){
 		test.equal(result[0].author_name, person.author_name);
 		test.equal(result[0].author_email, person.author_email);
 		test.equal(result[0].author_phone, person.author_phone);

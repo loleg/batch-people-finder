@@ -4,3 +4,9 @@ Under development at #RHoK Basel - June 4/5, 2011
 
 More info: #peoplefinder on Freenode IRC
 
+Dependencies (* install via 'npm install [package]'):
+
+express *
+jade *
+xml2js
+nodeunit *

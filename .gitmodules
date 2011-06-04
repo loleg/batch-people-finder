@@ -4,3 +4,9 @@
 [submodule "node_modules/xml2js"]
 	path = node_modules/xml2js
 	url = git://github.com/Leonidas-from-XIV/node-xml2js.git
+[submodule "node_modules/csv"]
+	path = node_modules/csv
+	url = git://github.com/wdavidw/node-csv-parser.git
+[submodule "node_modules/sax"]
+	path = node_modules/sax
+	url = git://github.com/isaacs/sax-js.git

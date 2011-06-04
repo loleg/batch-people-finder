@@ -1,12 +1,17 @@
 Batch uploader for People Finder
 
-Under development at #RHoK Basel - June 4/5, 2011
+# DESCRIPTION
 
-More info: #peoplefinder on Freenode IRC
+Created at #RHoK Basel, Switzerland - June 4, 2011
+See https://github.com/loleg/batch-people-finder
+Chat with us in #peoplefinder on Freenode IRC
 
-Dependencies (* install via 'npm install [package]'):
+# DEPENDENCIES
 
-express *
-jade *
-xml2js
-nodeunit *
+Dependencies which should be installed via npm:
+
+ npm install express jade nodeunit
+
+Other dependencies:
+
+ xml2js csv sax

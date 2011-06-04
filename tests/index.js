@@ -16,10 +16,10 @@ var person = {
 exports.ParseXMLFile = function(test){
 	test.expect(4);
 	parser.ParseFile({uri: sample_person_xml, format: 'xml'}, function(result){
-		test.equal(result.author_name, person.author_name);
-		test.equal(result.author_email, person.author_email);
-		test.equal(result.author_phone, person.author_phone);
-		test.equal(result.source_name, person.source_name);
+		test.equal(result[0].author_name, person.author_name);
+		test.equal(result[0].author_email, person.author_email);
+		test.equal(result[0].author_phone, person.author_phone);
+		test.equal(result[0].source_name, person.source_name);
 		test.done();
 	});
 };
@@ -28,10 +28,10 @@ exports.ParseXMLFile = function(test){
 exports.ParseCSVFile = function(test){
 	test.expect(4);
 	parser.ParseFile({uri: sample_person_cvs, format: 'csv'}, function(err, result){
-		test.equal(result.author_name, person.author_name);
-		test.equal(result.author_email, person.author_email);
-		test.equal(result.author_phone, person.author_phone);
-		test.equal(result.source_name, person.source_name);
+		test.equal(result[0].author_name, person.author_name);
+		test.equal(result[0].author_email, person.author_email);
+		test.equal(result[0].author_phone, person.author_phone);
+		test.equal(result[0].source_name, person.source_name);
 		test.done();
 	});
 };

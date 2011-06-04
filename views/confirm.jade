@@ -1,0 +1,23 @@
+h1= title
+form(method="post")
+  fieldset
+    legend Missing persons list
+    table
+      tr
+        th
+        th Name
+        th Details
+        th Last known location
+      tbody#people
+        - each person in people
+          tr
+            td
+              input(type="checkbox", name="chkperson")
+            td
+              p= person.name
+            td
+              p= person.sex
+              p= person.dob
+            td
+              p= person.lkl
+    input(type="submit", value="Continue")

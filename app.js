@@ -34,5 +34,29 @@ app.get('/', function(req, res){
   });
 });
 
+app.post('/', function(req, res){
+  res.render('confirm', {
+    title: 'Confirm People Import',
+    people: [
+      {
+        name: 'Bill Mandil',
+        sex: 'Male',
+        dob: '1980',
+        lkl: 'at home in Kentucky'
+      }, {
+        name: 'Jane Sykes',
+        sex: 'Female',
+        dob: '1991',
+        lkl: 'in the Oregon field'
+      }, {
+        name: 'Timothy Blair',
+        sex: 'Male',
+        dob: '1980',
+        lkl: 'driving a red car on Route 66'
+      }
+    ]
+  });
+});
+
 app.listen(3000);
 console.log("Express server listening on port %d", app.address().port);

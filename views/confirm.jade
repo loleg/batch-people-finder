@@ -14,10 +14,12 @@ form(method="post")
             td
               input(type="checkbox", name="chkperson")
             td
-              p= person.name
+              span= person.first_name
+              span= person.last_name
             td
-              p= person.sex
-              p= person.dob
+              span= person.sex
+              -
+              span= person.age
             td
-              p= person.lkl
+              p= person.note
     input(type="submit", value="Continue")

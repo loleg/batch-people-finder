@@ -4,6 +4,8 @@
  */
 
 var express = require('express');
+var sys = require('sys')
+    parser = require('./lib/parser');
 
 var app = module.exports = express.createServer();
 
@@ -35,27 +37,13 @@ app.get('/', function(req, res){
 });
 
 app.post('/', function(req, res){
-  res.render('confirm', {
-    title: 'Confirm People Import',
-    people: [
-      {
-        name: 'Bill Mandil',
-        sex: 'Male',
-        dob: '1980',
-        lkl: 'at home in Kentucky'
-      }, {
-        name: 'Jane Sykes',
-        sex: 'Female',
-        dob: '1991',
-        lkl: 'in the Oregon field'
-      }, {
-        name: 'Timothy Blair',
-        sex: 'Male',
-        dob: '1980',
-        lkl: 'driving a red car on Route 66'
-      }
-    ]
-  });
+  parser.ParseFile({uri: 'http://ox4hs.utou.ch/rhok/pfif-1.2-example-simple.csv', format:'csv', delimiter:';'}, 
+    function(result){     
+      res.render('confirm', {
+        title: 'Confirm Import',
+        people: result
+      });
+    });
 });
 
 app.listen(3000);

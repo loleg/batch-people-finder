@@ -1,3 +1,6 @@
 [submodule "node_modules/xml"]
 	path = node_modules/xml
 	url = git://github.com/dylang/node-xml.git
+[submodule "node_modules/xml2js"]
+	path = node_modules/xml2js
+	url = git://github.com/Leonidas-from-XIV/node-xml2js.git

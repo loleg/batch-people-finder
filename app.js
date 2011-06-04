@@ -32,18 +32,25 @@ app.configure('production', function(){
 
 app.get('/', function(req, res){
   res.render('index', {
-    title: 'Batch People Finder'
+    title: 'Batch People Finder', message: ''
   });
 });
 
 app.post('/', function(req, res){
-  parser.ParseFile({uri: 'http://ox4hs.utou.ch/rhok/pfif-1.2-example-simple.csv', format:'csv', delimiter:';'}, 
-    function(result){     
-      res.render('confirm', {
-        title: 'Confirm Import',
-        people: result
-      });
+  if(req.param('urldata','') == '') {
+    res.render('index', {
+      title: 'Batch People Finder',
+      message: 'Please enter a valid URL'
     });
+  } else {
+    parser.ParseFile({uri:req.param('urldata',''), format:req.param('urltype',''), delimiter:';'}, 
+      function(result){     
+        res.render('confirm', {
+          title: 'Confirm Import',
+          people: result
+        });
+      });
+  }
 });
 
 app.listen(3000);

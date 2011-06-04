@@ -5,12 +5,25 @@ form(method="post")
     legend Missing persons list
     p.buttons
       label(for="listurl") URL:
-        input(type="text", name="listurl")
+        input(type="text", name="urldata")
           | Enter a valid
           | missing persons list web link
           | see examples below.
+        select(name="urltype")
+          option(value="") --Type--
+          option(value="xml") XML
+          option(value="csv") CSV
         input(type="submit", value="Go")
+    p.message= message
 
 h2 Examples
-a(href='http://zesty.ca/pfif/1.2/pfif-1.2-example.xml') pfif example
+p 
+  b XML
+p
+  a(href='http://zesty.ca/pfif/1.2/pfif-1.2-example.xml') http://zesty.ca/pfif/1.2/pfif-1.2-example.xml
+p 
+  b CSV
+p
+  a(href='http://ox4hs.utou.ch/rhok/pfif-1.2-example-simple.csv') http://ox4hs.utou.ch/rhok/pfif-1.2-example-simple.csv
+
 

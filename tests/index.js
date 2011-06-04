@@ -1,5 +1,6 @@
 var	sys = require('sys')
-	parser = require('../lib/parser');
+	parser = require('../lib/parser'),
+	personfinder_api = require('../lib/personfinder_api');
 
 var sample_person_xml = 'http://zesty.ca/pfif/1.2/pfif-1.2-example.xml';
 var sample_person_cvs = 'http://ox4hs.utou.ch/rhok/pfif-1.2-example-simple.csv';
@@ -32,6 +33,14 @@ exports.ParseCSVFile = function(test){
 		test.equal(result[0].author_email, person.author_email);
 		test.equal(result[0].author_phone, person.author_phone);
 		test.equal(result[0].source_name, person.source_name);
+		test.done();
+	});
+};
+
+exports.Search = function(test){
+	test.expect(1);
+	personfinder_api.Search('Peter', function(result){
+		test.equal(true,true);
 		test.done();
 	});
 };

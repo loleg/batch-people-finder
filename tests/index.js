@@ -15,7 +15,7 @@ var person = {
 // Loads an XML file by uri, parses it and then checks if it's converted correctly 
 exports.ParseXMLFile = function(test){
 	test.expect(4);
-	parser.ParseFile({uri: person_finder_xml, format: 'xml'}, function(err, result){
+	parser.ParseFile({uri: sample_person_xml, format: 'xml'}, function(result){
 		test.equal(result.author_name, person.author_name);
 		test.equal(result.author_email, person.author_email);
 		test.equal(result.author_phone, person.author_phone);
@@ -27,7 +27,7 @@ exports.ParseXMLFile = function(test){
 // Loads an CVS file by uri, parses it and then checks if it's converted correctly 
 exports.ParseCSVFile = function(test){
 	test.expect(4);
-	parser.ParseFile({uri: person_finder_xml, format: 'csv'}, function(err, result){
+	parser.ParseFile({uri: sample_person_cvs, format: 'csv'}, function(err, result){
 		test.equal(result.author_name, person.author_name);
 		test.equal(result.author_email, person.author_email);
 		test.equal(result.author_phone, person.author_phone);

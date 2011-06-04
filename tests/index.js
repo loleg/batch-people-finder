@@ -2,14 +2,14 @@ var	sys = require('sys')
 	parser = require('../lib/parser');
 
 var sample_person_xml = 'http://zesty.ca/pfif/1.2/pfif-1.2-example.xml';
-var sample_person_cvs = 'example-data/pfif-1.2-example-simple.csv';
+var sample_person_cvs = 'http://ox4hs.utou.ch/rhok/pfif-1.2-example-simple.csv';
 
 var person = {
 	author_name: 'Bill Mandil',
 	author_email: 'bmd67893@example.com',
 	author_phone: '(555) 258-6902',
 	source_name: 'salesforce.com',
-	source_date: '2005-09-03T09:21:12Z'
+	source_date: '2005-09-03••••••T09:21:12Z'
 };
 
 // Loads an XML file by uri, parses it and then checks if it's converted correctly 

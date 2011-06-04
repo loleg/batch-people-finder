@@ -8,7 +8,7 @@
 var app = require('../app')
   , assert = require('assert');
 
-
+/*
 module.exports = {
   'GET /': function(){
     assert.response(app,
@@ -19,3 +19,4 @@ module.exports = {
       });
   }
 };
+*/

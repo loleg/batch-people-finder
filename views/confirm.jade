@@ -6,8 +6,10 @@ form(method="post")
       tr
         th
         th Name
+        th
         th Details
-        th Last known location
+        th Last seen
+        th People Finder
       tbody#people
         - each person in people
           tr
@@ -15,6 +17,7 @@ form(method="post")
               input(type="checkbox", name="chkperson")
             td
               span= person.first_name
+            td
               span= person.last_name
             td
               span= person.sex
@@ -22,4 +25,7 @@ form(method="post")
               span= person.age
             td
               p= person.note
+            td(id= person.first_name)
+              script
+                $.get('/search/?fn=!{person.first_name}&ln=!{person.last_name}', function(r){if (r != "true") document.getElementById('!{person.first_name}').innerHTML = '&#10003;';})
     input(type="submit", value="Continue")

@@ -49,7 +49,7 @@ exports.Search = function(test){
 
 exports.Upload = function(test){
 	test.expect(1);
-	personfinder_api.Upload('abc', function(result){
+	personfinder_api.Upload({'pfif:pfif xmlns:pfif="http://zesty.ca/pfif/1.3"': {'pfif:person': [person]}}, function(result){
 		test.equal(true, true);
 		test.done();
 	})

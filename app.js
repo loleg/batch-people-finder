@@ -1,3 +1,19 @@
+/**
+ * Batch People Finder
+ * 
+ * - see README for details -
+ *
+ */
+
+// Configuration
+
+var app_conf = {
+    port: 8000,
+    peoplefinder: {
+        key = '',
+        host = ''
+    }
+};
 
 /**
  * Module dependencies.
@@ -9,7 +25,7 @@ var sys = require('sys')
 
 var app = module.exports = express.createServer();
 
-// Configuration
+// Setup Express
 
 app.configure(function(){
   app.set('views', __dirname + '/views');
@@ -53,5 +69,5 @@ app.post('/', function(req, res){
   }
 });
 
-app.listen(3000);
-console.log("Express server listening on port %d", app.address().port);
+app.listen(app_conf.port);
+console.log("Batch People Finder listening on port %d", app.address().port);

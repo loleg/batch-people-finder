@@ -10,8 +10,8 @@
 var app_conf = {
     port: 8000,
     peoplefinder: {
-        key = '',
-        host = ''
+        key : '',
+        host : ''
     }
 };
 

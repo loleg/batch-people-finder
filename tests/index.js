@@ -46,11 +46,25 @@ exports.Search = function(test){
 		test.done();
 	});
 };
-
+/*
 exports.Upload = function(test){
 	test.expect(1);
 	personfinder_api.Upload('abc', function(result){
 		test.equal(true, true);
 		test.done();
-	})
+	});
+}
+*/
+exports.ParseAndSearch = function(test) {
+  test.expect(2);
+  parser.ParseFile({uri: sample_person_cvs, format:'csv', delimiter:';'}, function(result){
+    test.equal(result[0].author_name, person.author_name);
+    var q = result[0].first_name + ' ' + result[0].last_name;
+    console.log("Searching for '" + q + "'");
+    personfinder_api.Search(q, function(res){
+      console.log(res.len + ' found');
+      test.equal(true, true);
+      test.done();
+    });
+  });
 }

@@ -1,17 +1,37 @@
 Batch uploader for People Finder
 
+[CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/)
+
 # DESCRIPTION
 
 Created at #RHoK Basel, Switzerland - June 4, 2011
-See https://github.com/loleg/batch-people-finder
-Chat with us in #peoplefinder on Freenode IRC
+
+This is a Web application that is used to import data from a remotely hosted list of missing persons, and populate an instance of Google People Finder with the information. Users are presented with a simple form to paste in the address of remotely hosted data, a confirmation screen shows the imported data and checks for duplicate entries before it is uploaded to the People Finder instance.
+
+We currently support PFIF 1.3 XML, as well as JSON or CSV with PFIF field names.
+
+Info: http://www.rhok.org/node/2689
+Code: https://github.com/loleg/batch-people-finder
+Chat: Freenode IRC #peoplefinder
 
 # DEPENDENCIES
 
 Dependencies which should be installed via npm:
 
- npm install express jade nodeunit
+npm install xml2js 
+npm install csv
 
-Other dependencies:
+Other dependencies which may need to be updated:
 
- xml2js csv sax
+ express 
+ jade 
+ nodeunit 
+ sax
+
+# RUNNING
+
+node app.js
+
+# CONFIGURATION
+
+Edit app.js to change default port (3000) and keys.

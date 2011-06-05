@@ -21,7 +21,8 @@ var app_conf = {
 
 var express = require('express');
 var sys = require('sys')
-    parser = require('./lib/parser');
+    parser = require('./lib/parser')
+    personfinder_api = require('./lib/personfinder_api');
 
 var app = module.exports = express.createServer();
 
@@ -66,6 +67,18 @@ app.post('/', function(req, res){
           people: result
         });
       });
+  }
+});
+
+app.get('/search', function(req, res){
+  if(req.param('fn','') == '' 
+    && req.param('ln','') == '') {
+      res.send('');
+  } else {
+    var q = req.param('fn','') + ' ' + req.param('ln','');
+    personfinder_api.Search(q, function(r){
+      res.send(r.len > 0);
+    });
   }
 });
 

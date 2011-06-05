@@ -2,7 +2,7 @@ h1= title
 form(method="post")
   fieldset
     legend Missing persons list
-    table
+    table(class='peoplelist')
       tr
         th
         th Name
@@ -24,8 +24,11 @@ form(method="post")
               -
               span= person.age
             td
-              p= person.note
+              p= person.home_neighborhood
             td(id= person.first_name)
               script
                 $.get('/search/?fn=!{person.first_name}&ln=!{person.last_name}', function(r){if (r != "true") document.getElementById('!{person.first_name}').innerHTML = '&#10003;';})
+
+  p Note: uploads are currently disabled
+  p
     input(type="submit", value="Continue")

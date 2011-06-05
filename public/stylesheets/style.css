@@ -94,6 +94,21 @@ input[type='submit']:hover{
 	background:-webkit-gradient(linear, 50% 0, 50% 100%, from(#61b21a), to(#57a215));
 	cursor: pointer;
 }
+p.message {
+        clear: both;
+        color: orange;
+        padding-top: 1em;
+        text-align: center;
+}
+input#urldata {
+        width:50%;
+}
+div.vselect {
+        display:inline; float:left; padding-right:1em;
+}
+table.peoplelist {
+        text-align: center; width: 100%;
+}
 div.examples{
 	border-top: 1px solid #fff;
 	clear: both;

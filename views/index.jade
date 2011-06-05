@@ -3,44 +3,55 @@ a(href="https://github.com/loleg/batch-people-finder")
 div(id="container")
   h1= title
   p(class="subtitle")
-    span Developed at #RHoK Basel June 4, 2011
+    span
+      a(href="http://www.rhok.org/node/2689") Random Hacks of Kindness #3
   form(method="post")
     fieldset
       legend Missing persons list
       label(for="listurl") URL
-      input(type="text", name="urldata")
+      input(type="text", name="urldata", id="urldata")
         | Enter a valid
         | missing persons list web link
         | see examples below.
-      select(name="urltype")
-        option(value="") --File Type--
-        option(value="xml") XML
-        option(value="csv") CSV
-        option(value="json") JSON
+      div(class="vselect")
+        input(type="radio",name="urltype",value="xml") 
+        small XML
+        br
+        input(type="radio",name="urltype",value="csv") 
+        small CSV
+        br
+        input(type="radio",name="urltype",value="json") 
+        small JSON
+        br
       input(type="submit", value="Search")
       p.message= message
   div(class="examples")
-    h2 Examples
-    p 
-      b XML
+    h2 Examples 
     p
+      b XML
+      &nbsp;&bull;
       a(href='http://zesty.ca/pfif/1.2/pfif-1.2-example.xml') http://zesty.ca/pfif/1.2/pfif-1.2-example.xml
     p 
       b CSV
-    p
-      a(href='http://ox4hs.utou.ch/rhok/pfif-1.2-example-simple.csv') http://ox4hs.utou.ch/rhok/pfif-1.2-example-simple.csv
+      &nbsp;&bull;
+      a(href='http://ox4hs.utou.ch/rhok/personfinder/pfif-1.2-example-long.csv') http://ox4hs.utou.ch/rhok/personfinder/pfif-1.2-example-long.csv
     p
       b JSON
-    p
+      &nbsp;&bull;
       a(href='http://cloudciety.com/data.json') http://cloudciety.com/data.json
   
   div(id="footer")
     div
       h2 What
       p Batch People Finder allows companies and individuals without technical knowledge to upload lists right to the Google Person Finder, instead of having to manually enter them.
+      p 
+        a(href='http://www.rhok.org/node/2689') Read more
 
     div(class="right")
       h2 Who
-      p This application was started by Oleg and Philipp at #RHoKch at June 4th/5th 2011 in Basel, Switzerland.
-
-
+      p This application was started by Oleg (
+        a(href='http://twitter.com/loleg') @loleg
+        ) and Philipp (
+        a(href='http://twitter.com/philippkueng') @philippkueng
+        ) at
+        a(href='http://www.rhok.org/event/basel') Random Hacks of Kindness #3

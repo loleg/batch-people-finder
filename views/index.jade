@@ -1,29 +1,46 @@
-h1= title
-p Developed at #RHoK Basel June 4, 2011
-form(method="post")
-  fieldset
-    legend Missing persons list
-    p.buttons
-      label(for="listurl") URL:
-        input(type="text", name="urldata")
-          | Enter a valid
-          | missing persons list web link
-          | see examples below.
-        select(name="urltype")
-          option(value="") --Type--
-          option(value="xml") XML
-          option(value="csv") CSV
-        input(type="submit", value="Go")
-    p.message= message
+a(href="https://github.com/loleg/batch-people-finder")
+  img(style="position: absolute; top: 0; right: 0; border: 0;", src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png", alt="Fork me on GitHub")
+div(id="container")
+  h1= title
+  p(class="subtitle")
+    span Developed at #RHoK Basel June 4, 2011
+  form(method="post")
+    fieldset
+      legend Missing persons list
+      label(for="listurl") URL
+      input(type="text", name="urldata")
+        | Enter a valid
+        | missing persons list web link
+        | see examples below.
+      select(name="urltype")
+        option(value="") --File Type--
+        option(value="xml") XML
+        option(value="csv") CSV
+        option(value="json") JSON
+      input(type="submit", value="Search")
+      p.message= message
+  div(class="examples")
+    h2 Examples
+    p 
+      b XML
+    p
+      a(href='http://zesty.ca/pfif/1.2/pfif-1.2-example.xml') http://zesty.ca/pfif/1.2/pfif-1.2-example.xml
+    p 
+      b CSV
+    p
+      a(href='http://ox4hs.utou.ch/rhok/pfif-1.2-example-simple.csv') http://ox4hs.utou.ch/rhok/pfif-1.2-example-simple.csv
+    p
+      b JSON
+    p
+      a(href='http://cloudciety.com/data.json') http://cloudciety.com/data.json
+  
+  div(id="footer")
+    div
+      h2 What
+      p Batch People Finder allows companies and individuals without technical knowledge to upload lists right to the Google Person Finder, instead of having to manually enter them.
 
-h2 Examples
-p 
-  b XML
-p
-  a(href='http://zesty.ca/pfif/1.2/pfif-1.2-example.xml') http://zesty.ca/pfif/1.2/pfif-1.2-example.xml
-p 
-  b CSV
-p
-  a(href='http://ox4hs.utou.ch/rhok/pfif-1.2-example-simple.csv') http://ox4hs.utou.ch/rhok/pfif-1.2-example-simple.csv
+    div(class="right")
+      h2 Who
+      p This application was started by Oleg and Philipp at #RHoKch at June 4th/5th 2011 in Basel, Switzerland.
 
 

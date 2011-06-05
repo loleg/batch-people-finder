@@ -1,3 +1,7 @@
+# node related files
+####################
+npm-debug.log
+
 # OS generated files #
 ######################
 .DS_Store

@@ -6,10 +6,10 @@ Batch-People-Finder is a Web application that is used to import data from a remo
 
 We currently support PFIF 1.3 XML, as well as JSON or CSV with PFIF field names.
 
-Problem: [http://www.rhok.org/problems/upload-tool-person-finder](http://www.rhok.org/problems/upload-tool-person-finder)
-Solution: [http://www.rhok.org/node/2689](http://www.rhok.org/node/2689)
-Code: [https://github.com/loleg/batch-people-finder](https://github.com/loleg/batch-people-finder)
-Chat: Freenode IRC #peoplefinder
+* Problem: [http://www.rhok.org/problems/upload-tool-person-finder](http://www.rhok.org/problems/upload-tool-person-finder)
+* Solution: [http://www.rhok.org/node/2689](http://www.rhok.org/node/2689)
+* Code: [https://github.com/loleg/batch-people-finder](https://github.com/loleg/batch-people-finder)
+* Chat: Freenode IRC #peoplefinder
 
 ## INSTALLATION (on Ubuntu 10.04 LTS)
 

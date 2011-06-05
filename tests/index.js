@@ -46,3 +46,11 @@ exports.Search = function(test){
 		test.done();
 	});
 };
+
+exports.Upload = function(test){
+	test.expect(1);
+	personfinder_api.Upload('abc', function(result){
+		test.equal(true, true);
+		test.done();
+	})
+}

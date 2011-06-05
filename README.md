@@ -1,17 +1,14 @@
 # Batch uploader for People Finder
 
-[CC BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/)
+Started at #RHoK Basel, Switzerland - June 4th/5th, 2011 by [loleg](https://github.com/loleg) and [philippkueng](https://github.com/philippkueng)
 
-## DESCRIPTION
-
-Created at #RHoK Basel, Switzerland - June 4th/5th, 2011
-
-This is a Web application that is used to import data from a remotely hosted list of missing persons, and populate an instance of Google People Finder with the information. Users are presented with a simple form to paste in the address of remotely hosted data, a confirmation screen shows the imported data and checks for duplicate entries before it is uploaded to the People Finder instance.
+Batch-People-Finder is a Web application that is used to import data from a remotely hosted list of missing people, and populate an instance of [Google Person Finder](https://person-finder.appspot.com) with the information. Users are presented with a simple form to paste in the address of remotely hosted data, a confirmation screen shows the imported data and checks for duplicate entries before it is uploaded to the Person Finder instance.
 
 We currently support PFIF 1.3 XML, as well as JSON or CSV with PFIF field names.
 
-Info: http://www.rhok.org/node/2689
-Code: https://github.com/loleg/batch-people-finder
+Problem: [http://www.rhok.org/problems/upload-tool-person-finder](http://www.rhok.org/problems/upload-tool-person-finder)
+Solution: [http://www.rhok.org/node/2689](http://www.rhok.org/node/2689)
+Code: [https://github.com/loleg/batch-people-finder](https://github.com/loleg/batch-people-finder)
 Chat: Freenode IRC #peoplefinder
 
 ## INSTALLATION (on Ubuntu 10.04 LTS)
@@ -36,8 +33,7 @@ Dependencies which should be installed via npm
 
 	$ npm install express
 	$ npm install jade
-	$ npm install xml2js
-	$ npm install csv
+	$ npm install nodeunit
 
 Clone the batch-people-finder source code
 
@@ -48,6 +44,10 @@ Get additional dependencies by updating the git submodules
 	$ cd batch-people-finder/
 	$ git submodule update --init
 
+## TESTING
+
+	$ nodeunit tests/
+
 ## RUNNING
 
 	$ node app.js
@@ -55,3 +55,7 @@ Get additional dependencies by updating the git submodules
 ## CONFIGURATION
 
 Edit app.js to change default port (3000) and keys.
+
+## LICENSE
+
+Batch-People-Finder is licensed under the [CC BY-SA 3.0 - CreativeCommons Attribution-ShareAlike 3.0 License](http://creativecommons.org/licenses/by-sa/3.0/)

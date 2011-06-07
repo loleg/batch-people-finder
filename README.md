@@ -31,8 +31,6 @@ Install npm (the node.js packet manager)
 
 Dependencies which should be installed via npm
 
-	$ npm install express
-	$ npm install jade
 	$ npm install nodeunit
 
 Clone the batch-people-finder source code

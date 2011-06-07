@@ -13,3 +13,15 @@
 [submodule "node_modules/jsontoxml"]
 	path = node_modules/jsontoxml
 	url = git://github.com/soldair/node-jsontoxml.git
+[submodule "node_modules/jade"]
+	path = node_modules/jade
+	url = git://github.com/visionmedia/jade.git
+[submodule "node_modules/connect"]
+	path = node_modules/connect
+	url = git://github.com/senchalabs/connect.git
+[submodule "node_modules/mime"]
+	path = node_modules/mime
+	url = git://github.com/bentomas/node-mime.git
+[submodule "node_modules/express"]
+	path = node_modules/express
+	url = git://github.com/visionmedia/express.git

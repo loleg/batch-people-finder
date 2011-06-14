@@ -18,7 +18,7 @@ Install the newest stable release of [node.js](http://nodejs.org) (to date 0.4.8
 	$ sudo apt-get install git-core -y
 	$ git clone git://github.com/joyent/node.git
 	$ cd node/
-	$ git checkout v0.4.8
+	$ git checkout v0.4.7
 	$ ./configure
 	$ sudo make
 	$ sudo make install
@@ -32,15 +32,15 @@ Install npm (the node.js packet manager)
 Dependencies which should be installed via npm
 
 	$ npm install nodeunit
+	$ npm install express@2.3.11 (or higher)
+	$ npm install jade@0.12.1 (or higher)
+	$ npm install csv@0.0.9 (or higher)
+	$ npm install xml2js@0.1.8 (or higher)
+	$ npm install sax@0.1.4 (or higher)
 
 Clone the batch-people-finder source code
 
 	$ git clone git://github.com/loleg/batch-people-finder.git
-
-Get additional dependencies by updating the git submodules
-
-	$ cd batch-people-finder/
-	$ git submodule update --init
 
 ## TESTING
 

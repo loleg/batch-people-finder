@@ -8,7 +8,7 @@
 // Configuration
 
 var app_conf = {
-    port: 8000,
+    port: process.env.PORT || 8000,
     peoplefinder: {
         key : '',
         host : ''

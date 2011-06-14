@@ -1,8 +1,11 @@
 {
-    "name": "application-name"
-  , "version": "0.0.1"
-  , "private": true
-  , "dependencies": {
-    "jade": ">= 0.0.1"
-  }
+	"name": "batchpeoplefinder",
+	"version": "0.0.1",
+	"dependencies": {
+		"express": "2.3.11",
+		"jade": "0.12.1",
+		"csv": "0.0.9",
+		"jsontoxml": "0.0.2",
+		"sax": "0.1.4"
+	}
 }
